@@ -33,24 +33,21 @@ The project explores how machine learning can be integrated into a modular, cont
 ## 🏗️ System Architecture
 
 ```text
-               Browser / Webcam
-                       |
-                       v
-               Web/API Service
-                   Port 8000
-                       |
-              +--------+--------+
-              |                 |
-              v                 v
-       Inference Service   Storage Service
-          Port 8001          Port 8002
-              |                 |
-         TensorFlow         SQLite Database
-           Models           & Saved Images
+                 Browser / Webcam
+                        |
+                        v
+                 Web/API Service
+                        |
+              +---------+---------+
+              |                   |
+              v                   v
+       Inference Service    Storage Service
+              |                   |
+         TensorFlow          SQLite Database
+           Models             & Images
               ^
               |
-       Trainer Service
-          Port 8003
+        Trainer Service
 ```
 
 The Web/API service handles user interactions and coordinates inference and storage operations.
